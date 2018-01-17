@@ -1,27 +1,10 @@
-Name: Sheng Chen
 
-USC ID: 7203090398
+A computational offloading model with a front server and two backend servers designed to handle different computations. The client communicates with the front server(the edge server) using TCP, the edge then uses UDP to communicate with backend servers to receive computation results
 
-Work summary: 
-				built a simple model of computational offloading with a front server and two backend servers designed to handle different computations. The client communicates with the front server(the edge server) using TCP, the edge then uses UDP to communicate with backend servers to receive computation results
-
-Files included: 
-				edge.c: serves as the edge server, receives data, send to backend servers and send results to client
-				client.c: the client that reads computations from a text file and then sends to the edge server
-				server_and.c: the backend server that deals with "and" computations
-				server_or.c: the backend server that deals with "or" computations
-				job.txt: this is the input files that includes computations to be conducted
-				Makefile: this is the Makefile that automates compilation processes
-
-How to use: 
-				Just as specified by the documentation, enter the command "make all", and then make server_and, make server_or, make edge, ./client xxx.txt
-
-Assumptions:
-				This program works under the assumption of less than 100 lines and less than 100 characters per line
-
-Reused code:
-				Only two methods, int binaryToDecimal(int num) and int decimalToBinary(int num), from the backend servers were borrowed from online sources. The sources are: 1. http://beginnersbook.com/2015/02/c-program-to-convert-binary-number-to-decimal-number/
-										  2. https://www.programiz.com/c-programming/examples/binary-decimal-convert
-
-										  
+edge.c: serves as the edge server, receives data, send to backend servers and send results to client
+client.c: the client that reads computations from a text file and then sends to the edge server
+server_and.c: the backend server that deals with "and" computations
+server_or.c: the backend server that deals with "or" computations
+job.txt: this is the input files that includes computations to be conducted
+Makefile: this is the Makefile that automates compilation processes
 
